@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -46,6 +47,20 @@
       word-break: break-all;
       font-size: 0.95rem;
     }
+    .copy-btn {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.5rem 1rem;
+      background: #333;
+      color: #FFEB3B;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      opacity: 0.8;
+    }
 
     /* Tablets and small desktops */
     @media (min-width: 600px) {
@@ -61,6 +76,9 @@
       }
       .address {
         font-size: 1rem;
+      }
+      .copy-btn {
+        font-size: 1.05rem;
       }
     }
 
@@ -79,6 +97,9 @@
       .address {
         font-size: 1.05rem;
       }
+      .copy-btn {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
@@ -87,10 +108,22 @@
     <h1>☆★ DONÁ SATOSHIS ★☆</h1>
     <p>¡Hola! Che, qué lindo que estés acá. Si querés ayudarme a jubilarme un poco antes, podés colaborar dejando unos satoshis.</p>
 <p>Cada aporte, por más pequeño que sea, es importante para lograr este objetivo sin intermediarios.</p>
-<div class="address">bc1q8tndew6y8nq2928rx6zv72t5yuchxkqra5m2yv</div>
-<p>¡Muchas gracias por apoyar este proyecto descentralizado! 💛🙏🚀</p>
-
+    <div class="address" id="btc-address">bc1q8tndew6y8nq2928rx6zv72t5yuchxkqra5m2yv</div>
+    <button class="copy-btn" id="copy-btn">Copiar dirección</button>
+    <p>¡Muchas gracias por apoyar este proyecto descentralizado! 💛🙏🚀</p>
   </div>
+  <script>
+    document.getElementById('copy-btn').addEventListener('click', function() {
+      const address = document.getElementById('btc-address').innerText.trim();
+      navigator.clipboard.writeText(address).then(function() {
+        alert('Dirección copiada: ' + address);
+      }, function(err) {
+        console.error('Error copiando al portapapeles', err);
+      });
+    });
+  </script>
 </body>
 </html>
+
+
 

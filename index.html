@@ -7,33 +7,35 @@
   <meta name="description" content="Apoyá este proyecto con bitcoin: dona satoshis a mi billetera y mantené vivo el contenido sin intermediarios.">
   <meta name="keywords" content="donar satoshis, bitcoin, propina, donaciones, apoyo directo">
   <style>
+    /* Mobile-first styles */
     body {
       background-color: #FFEB3B;
       margin: 0;
       padding: 0;
-      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: "Courier New", Courier, monospace;
       color: #333;
+      min-height: 100vh;
+      line-height: 1.4;
     }
     .container {
+      width: 90%;
       background: rgba(255, 255, 255, 0.85);
-      padding: 2rem;
+      padding: 1rem;
       border: 2px solid #333;
       border-radius: 8px;
-      max-width: 90%;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       text-align: center;
     }
     h1 {
-      margin: 0 0 1rem;
-      font-size: 1.8rem;
+      margin: 0 0 0.75rem;
+      font-size: 1.5rem;
     }
     p {
       margin: 0.5rem 0;
-      line-height: 1.4;
+      font-size: 1rem;
     }
     .address {
       display: inline-block;
@@ -42,17 +44,53 @@
       background: #fff;
       border: 1px dashed #333;
       word-break: break-all;
+      font-size: 0.95rem;
+    }
+
+    /* Tablets and small desktops */
+    @media (min-width: 600px) {
+      .container {
+        width: 80%;
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.05rem;
+      }
+      .address {
+        font-size: 1rem;
+      }
+    }
+
+    /* Larger screens */
+    @media (min-width: 900px) {
+      .container {
+        width: 60%;
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      .address {
+        font-size: 1.05rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>☆★ DONÁ SATOSHIS ★☆</h1>
-    <p>¡Che, qué lindo que estés acá! Te invito a dejar una propina en satoshis, y ayudarme a jubilarme.</p>
-<p>Cada colaboración, por más pequeña que sea, ayuda muchísimo a mantener vivo este proyecto sin intermediarios ni vueltas raras.</p>
+    <p>¡Hola! Che, qué lindo que estés acá. Si querés ayudarme a jubilarme un poco antes, podés colaborar dejando unos satoshis.</p>
+<p>Cada aporte, por más pequeño que sea, es importante para lograr este objetivo sin intermediarios.</p>
 <div class="address">bc1q8tndew6y8nq2928rx6zv72t5yuchxkqra5m2yv</div>
-<p>¡Gracias de corazón por bancar desde la descentralización! 💛🙏🚀</p>
+<p>¡Muchas gracias por apoyar este proyecto descentralizado! 💛🙏🚀</p>
 
   </div>
 </body>
 </html>
+
